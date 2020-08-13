@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
+    <transition name="createDonation">
+        <service-call name="donation.DonationServices.create#Donation"/>
+        <!-- Send the user to response page based on result of the service call -->
+        <conditional-response url="../RecieveDonation">
+            <condition>
+                <expression>valid</expression>
+            </condition>
+        </conditional-response>
+        <default-response url="../FailedDonation"/>
+    </transition>
+    <widgets>
+            <form-single name="CreateDonation" transition="createDonation">
+                <field name="name">
+                    <default-field title="Name"> <text-line size="14"/></default-field>
+                </field>
+                <field name="email">
+                    <default-field title="Email"> <text-line size="18"/></default-field>
+                </field>
+                <field name="phoneNumber">
+                    <default-field title="Phone Number"> <text-line size="14"/></default-field>
+                </field>
+                <field name="donationAmount">
+                    <default-field title="Donation Amount"> <text-line size="4"/></default-field>
+                </field>
+                <field name="creditCardInfo">
+                    <default-field title="Credit Card Number"> <text-line size="16"/></default-field>
+                </field>
+                <field name="submitButton"><default-field title="Donate"><submit/></default-field></field>
+            </form-single>
+    </widgets>
+</screen>

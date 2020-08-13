@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-2.1.xsd">
+    <entity entity-name="Donation" package="donation">
+        <!--primary key is not tied to any of the requested fields as none are unique-->
+        <field name="donationID" type="id" is-pk="true"/>
+        <field name="name" type="text-medium"/>
+        <field name="email" type="text-medium"/>
+        <field name="phoneNumber" type="text-medium"/>
+        <field name="donationAmount" type="currency-amount"/>
+        <field name="creditCardInfo" type="text-medium" encrypt="true"/>
+        <field name="processed" type="text-indicator"/>
+    </entity>
+
+    <!--TODO: create second entity for specifically credit card data and link it to the donation entity -->
+</entities>

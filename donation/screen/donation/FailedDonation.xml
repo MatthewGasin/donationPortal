@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
+    <widgets>
+        <label type="h2" text="Unfortunately the data you entered was invalid. Please recheck your credit card information and try again!"/>
+    </widgets>
+</screen>
