@@ -1,7 +1,6 @@
 ## MK Decision Coding Challenge
 
-This is my submission the Moqui Fundamentals challenge.
-The application is a donation portal built atop the Moqui framework.
+This application is a donation portal built atop the Moqui framework.
 Only the donation component I created is present in this repository. This includes:
 
 - The main screen `donation`
